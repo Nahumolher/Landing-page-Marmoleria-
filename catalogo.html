@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Piedras Naturales - Marmolería Cesca</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>MARMOLERÍA</h1>
+                        <span class="brand-name">CESCA</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Inicio</a>
+                <span class="separator">›</span>
+                <span class="current" id="breadcrumb-current">Catálogo de Piedras Naturales</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Catalog Hero -->
+    <section class="catalog-hero">
+        <div class="container">
+            <div class="catalog-hero-content">
+                <h1 id="main-title">Catálogo de Piedras Naturales</h1>
+                <p id="main-description">Descubre nuestra exclusiva selección de piedras naturales. Materiales nobles y de gran belleza, de distintas partes del mundo para todo tipo de proyectos y necesidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vista de Categorías Principales -->
+    <section class="categories-section" id="categories-view">
+        <div class="container">
+            <div class="categories-grid">
+                <div class="category-card" data-category="granitos">
+                    <div class="category-image">
+                        <img src="img/granito.jpg" alt="Granitos" loading="lazy">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3>Granitos</h3>
+                                <p>Óptimo para mesadas de vanitory y cocinas, pisos de alto tránsito y revestimientos tanto internos como externos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="marmoles">
+                    <div class="category-image">
+                        <img src="img/marmol.jpg" alt="Mármoles" loading="lazy">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3>Mármoles</h3>
+                                <p>Elegancia y distinción para espacios únicos. Ideales para revestimientos y aplicaciones decorativas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="cuarcitas">
+                    <div class="category-image">
+                        <img src="img/cuarcitas.jpg" alt="Cuarcitas" loading="lazy">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3>Cuarcitas</h3>
+                                <p>Resistencia y belleza natural. Perfectas para mesadas y aplicaciones de alto rendimiento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="travertinos">
+                    <div class="category-image">
+                        <img src="img/IMG-home-corian.jpg" alt="Travertinos" loading="lazy">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3>Travertinos</h3>
+                                <p>Calidez y textura natural. Ideales para pisos y revestimientos con personalidad única.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="calizas">
+                    <div class="category-image">
+                        <img src="img/2.jpg" alt="Calizas" loading="lazy">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3>Calizas</h3>
+                                <p>Versatilidad y durabilidad. Perfectas para proyectos arquitectónicos y decorativos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-card" data-category="onice">
+                    <div class="category-image">
+                        <img src="img/IMG-home-neolith.jpg" alt="Ónice" loading="lazy">
+                        <div class="category-overlay">
+                            <div class="category-info">
+                                <h3>Ónice</h3>
+                                <p>Lujo y sofisticación. Piedras translúcidas con vetas únicas para espacios exclusivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vista de Variantes por Categoría -->
+    <section class="variants-section" id="variants-view" style="display: none;">
+        <div class="container">
+            <!-- Botón de regreso -->
+            <div class="back-button">
+                <button class="btn-back" id="backToCategories">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="m19 12-7 7-7-7"></path>
+                    </svg>
+                    Volver a Categorías
+                </button>
+            </div>
+
+            <!-- Descripción de la categoría -->
+            <div class="category-description" id="category-description">
+                <h2 id="category-title">Granitos</h2>
+                <p id="category-info">Este tipo de material es óptimo para mesadas de vanitory y cocinas, pisos de alto tránsito y revestimientos tanto internos como externos.</p>
+            </div>
+
+            <!-- Subsecciones (Nacionales/Importados) -->
+            <div class="variants-content" id="variants-content">
+                <!-- Se generará dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title">Título del Producto</h2>
+                <button class="modal-close" onclick="cerrarModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Producto">
+                </div>
+                <div class="modal-info">
+                    <span id="modalCategory" class="modal-category">Categoría</span>
+                    <p id="modalOrigin" class="modal-origin">Origen</p>
+                    <p id="modalDescription" class="modal-description">Descripción del producto</p>
+                    
+                    <div class="modal-details">
+                        <h3>Características Técnicas</h3>
+                        <ul id="modalFeatures">
+                            <li>Característica 1</li>
+                            <li>Característica 2</li>
+                            <li>Característica 3</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-details">
+                        <h3>Aplicaciones</h3>
+                        <ul id="modalApplications">
+                            <li>Aplicación 1</li>
+                            <li>Aplicación 2</li>
+                            <li>Aplicación 3</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button class="btn-primary" onclick="solicitarCotizacion()">Solicitar Cotización</button>
+                        <button class="btn-secondary" onclick="descargarCatalogo()">Descargar Catálogo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MARMOLERÍA CESCA</h3>
+                    <p>© 2025 Marmolería Cesca. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Catálogo</h4>
+                        <ul>
+                            <li><a href="catalogo.html">Piedras Naturales</a></li>
+                            <li><a href="index.html#superficies-ingenieria">Superficies de Ingeniería</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li><a href="#">Muestras</a></li>
+                            <li><a href="#">Asesoramiento</a></li>
+                            <li><a href="#">Garantías</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Síguenos</h4>
+                        <div class="social-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">Youtube</a>
+                            <a href="#">Pinterest</a>
+                            <a href="#">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="catalogo-nuevo.js"></script>
+</body>
+</html>

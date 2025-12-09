@@ -1,0 +1,55 @@
+<!-- FORMULARIO CON EMAILJS -->
+<!-- Agregar antes del </head> en index.html -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+(function(){
+    emailjs.init("TU_USER_ID"); // Cambia por tu User ID de EmailJS
+})();
+</script>
+
+<!-- Formulario (mantener el HTML actual pero cambiar JavaScript) -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Mostrar loading
+    const btn = this.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    
+    // Obtener datos del formulario
+    const formData = {
+        nombre: this.nombre.value,
+        apellido: this.apellido.value,
+        email: this.email.value,
+        telefono: this.telefono.value,
+        tipo_consulta: this.tipo_consulta.value,
+        mensaje: this.mensaje.value
+    };
+    
+    // Enviar con EmailJS
+    emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', formData)
+        .then(function() {
+            alert('¡Mensaje enviado con éxito!');
+            document.getElementById('contactForm').reset();
+            window.location.href = 'gracias.html';
+        }, function(error) {
+            alert('Error al enviar el mensaje: ' + error);
+        })
+        .finally(function() {
+            btn.textContent = originalText;
+            btn.disabled = false;
+        });
+});
+</script>
+
+<!--
+INSTRUCCIONES PARA EMAILJS:
+1. Crear cuenta en https://www.emailjs.com/
+2. Configurar servicio de Gmail
+3. Crear template de email
+4. Obtener User ID, Service ID y Template ID
+5. Reemplazar en el código
+-->
